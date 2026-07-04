@@ -331,33 +331,33 @@ This allows developers and security teams to discover and fix vulnerable depende
 Key Terms to Memorize
 Term
 Definition
-Open Source Software (OSS)
+Open Source Software (OSS):
 Software with publicly available source code.
 
-Dependency
+Dependency:
 External code your application relies on.
 
-Direct Dependency
+Direct Dependency:
 A package you explicitly install.
 
-Transitive Dependency
+Transitive Dependency:
 A package installed automatically because another dependency requires it.
 
-Package
+Package:
 Reusable software that provides specific functionality.
 
-Package Manager
+Package Manager:
 Tool that installs and manages dependencies.
 
-Manifest File
+Manifest File:
 File declaring the project's dependencies.
 
-Lock File
+Lock File:
 File recording the exact installed dependency versions.
 
-Dependency Tree
+Dependency Tree: 
 A hierarchical map of all direct and transitive dependencies.
 
-Software Composition Analysis (SCA)
+Software Composition Analysis (SCA):
 The automated process of identifying, analyzing, and securing third-party software components in an application.
 
