@@ -1,0 +1,12 @@
+End-of-Session Assessment
+1.Answer these questions without looking back at the notes:
+2.What is Open Source Software, and why do developers use it?
+3.Explain the difference between a package and a dependency.
+4.Distinguish between direct and transitive dependencies, giving an example of each.
+5.What is the role of a package manager?
+6.Compare a manifest file with a lock file.
+7.Why can software become vulnerable even if you never wrote the vulnerable code yourself?
+8.What is a dependency tree, and why is it important in security?
+9.Define Software Composition Analysis (SCA) in your own words.
+10.Describe how an attacker might exploit a vulnerable dependency.
+11.Explain how Snyk detects vulnerabilities in a project.
