@@ -333,22 +333,31 @@ Term
 Definition
 Open Source Software (OSS)
 Software with publicly available source code.
+
 Dependency
 External code your application relies on.
+
 Direct Dependency
 A package you explicitly install.
+
 Transitive Dependency
 A package installed automatically because another dependency requires it.
+
 Package
 Reusable software that provides specific functionality.
+
 Package Manager
 Tool that installs and manages dependencies.
+
 Manifest File
 File declaring the project's dependencies.
+
 Lock File
 File recording the exact installed dependency versions.
+
 Dependency Tree
 A hierarchical map of all direct and transitive dependencies.
+
 Software Composition Analysis (SCA)
 The automated process of identifying, analyzing, and securing third-party software components in an application.
 
