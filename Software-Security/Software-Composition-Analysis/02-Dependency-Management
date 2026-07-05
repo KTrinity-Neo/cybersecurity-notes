@@ -398,31 +398,3 @@ Package Lifecycle	The stages a software package goes through from creation to re
 Typosquatting	Publishing malicious packages with names similar to legitimate ones.
 Dependency Confusion	Tricking build systems into installing malicious public packages instead of internal ones.
 Supply Chain Security	Protecting software from threats introduced through third-party components.
-End-of-Session Assessment
-
-Answer these questions without referring to your notes:
-
-What is dependency management, and why is it important?
-Explain the components of a package ecosystem.
-What is a software supply chain?
-Why are package registries essential?
-What is dependency hell?
-Describe the lifecycle of a software package.
-Why do packages become abandoned, and what risks do they pose?
-Explain how a typosquatting attack works.
-What is a dependency confusion attack?
-Why has software supply chain security become a critical focus in cybersecurity?
-Practical Exercise
-
-Create a new file in your repository:
-
-cybersecurity-notes/
-└── Software-Security/
-    └── Software-Composition-Analysis/
-        └── 02-Dependency-Management.md
-
-Summarize today's lesson in your own words, answer the assessment questions, and commit your work with:
-
-git add .
-git commit -m "Add notes on dependency management and package ecosystems"
-git push origin main
