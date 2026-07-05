@@ -1,4 +1,4 @@
-End-of-Software-Composition-Analysis Assessments
+End-of-Software-Composition-Analysis Wk1Day1 Assessments
 
 1.Answer these questions without looking back at the notes:
 2.What is Open Source Software, and why do developers use it?
@@ -105,4 +105,32 @@ If a known vulnerability exists, they may use publicly available exploits to gai
 Snyk scans a project's manifest and lock files, builds the dependency tree, identifies package versions, compares them against known vulnerability databases, and reports any security issues along with recommended fixes.
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+End-of-Software-Composition-Analysis Wk1Day2 Assessments
+
+1.What is dependency management, and why is it important?
+2.Explain the components of a package ecosystem.
+3.What is a software supply chain?
+4.Why are package registries essential?
+5.What is dependency hell?
+6.Describe the lifecycle of a software package.
+7.Why do packages become abandoned, and what risks do they pose?
+8.Explain how a typosquatting attack works.
+9.What is a dependency confusion attack?
+10.Why has software supply chain security become a critical focus in cybersecurity?
 
