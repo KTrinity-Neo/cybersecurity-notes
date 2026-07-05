@@ -1,1 +1,135 @@
+End-of-Software-Composition-Analysis Wk1Day1 Assessments
 
+1.Answer these questions without looking back at the notes:
+2.What is Open Source Software, and why do developers use it?
+3.Explain the difference between a package and a dependency.
+4.Distinguish between direct and transitive dependencies, giving an example of each.
+5.What is the role of a package manager?
+6.Compare a manifest file with a lock file.
+7.Why can software become vulnerable even if you never wrote the vulnerable code yourself?
+8.What is a dependency tree, and why is it important in security?
+9.Define Software Composition Analysis (SCA) in your own words.
+10.Describe how an attacker might exploit a vulnerable dependency.
+11.Explain how Snyk detects vulnerabilities in a project.
+
+
+
+## 1. What is Open Source Software?
+
+Open Source Software (OSS) is software whose source code is publicly available for anyone to inspect, modify, and distribute under its license.
+
+Developers use OSS because it saves development time, reduces costs, encourages collaboration, and provides tested solutions instead of building everything from scratch.
+
+
+
+## 2. Difference Between a Package and a Dependency
+
+A package is a reusable collection of code that provides specific functionality.
+
+A dependency is any package that an application relies on to function.
+
+For example, Express is a package. Once my project uses Express, it becomes a dependency.
+
+
+
+## 3. Direct vs Transitive Dependencies
+
+A direct dependency is a package that I explicitly install.
+
+Example:
+npm install express
+
+A transitive dependency is installed automatically because another package requires it.
+
+Example:
+Express automatically installs packages like debug and mime.
+
+
+
+## 4. Role of a Package Manager
+
+A package manager automates the installation, updating, removal, and management of software packages and their dependencies.
+
+Examples include npm, pip, Maven, Cargo, and Composer.
+
+
+
+## 5. Manifest File vs Lock File
+
+A manifest file lists the packages a project requires.
+
+Example:
+package.json
+
+A lock file records the exact versions of all installed packages and dependencies.
+
+Example:
+package-lock.json
+
+The lock file ensures everyone installs identical dependency versions.
+
+
+
+## 6. Why Can Software Become Vulnerable?
+
+Modern applications rely heavily on third-party libraries.
+
+If one of these libraries contains a known vulnerability, every application using it becomes vulnerable, even if the application's own code is secure.
+
+
+
+## 7. Dependency Tree
+
+A dependency tree is a hierarchical representation of all direct and transitive dependencies used by an application.
+
+It helps security tools identify vulnerable packages throughout the entire software supply chain.
+
+
+
+## 8. Software Composition Analysis (SCA)
+
+Software Composition Analysis (SCA) is the automated process of identifying open-source components in an application, detecting known vulnerabilities, assessing licensing risks, and recommending remediation.
+
+
+
+## 9. Exploiting Vulnerable Dependencies
+
+Attackers scan applications to identify vulnerable dependency versions.
+
+If a known vulnerability exists, they may use publicly available exploits to gain unauthorized access, execute malicious code, steal sensitive data, or disrupt services.
+
+
+
+## 10. How Snyk Detects Vulnerabilities
+
+Snyk scans a project's manifest and lock files, builds the dependency tree, identifies package versions, compares them against known vulnerability databases, and reports any security issues along with recommended fixes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+End-of-Software-Composition-Analysis Wk1Day2 Assessments
+
+1.What is dependency management, and why is it important?
+2.Explain the components of a package ecosystem.
+3.What is a software supply chain?
+4.Why are package registries essential?
+5.What is dependency hell?
+6.Describe the lifecycle of a software package.
+7.Why do packages become abandoned, and what risks do they pose?
+8.Explain how a typosquatting attack works.
+9.What is a dependency confusion attack?
+10.Why has software supply chain security become a critical focus in cybersecurity?
