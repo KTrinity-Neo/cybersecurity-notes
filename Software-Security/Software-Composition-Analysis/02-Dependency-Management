@@ -1,1 +1,20 @@
+Dependency Management & Dependency Trees:
 
+🌳 How dependency trees are built
+📦 Software package ecosystems (npm, PyPI, Maven, etc.)
+🔢 Semantic Versioning (SemVer)
+⚠️ Dependency Hell
+🎯 Supply Chain Attacks
+🔍 How Snyk traces vulnerable packages
+💻 Hands-on dependency analysis with npm
+🛡️ Your first practical vulnerability mapping exercise
+
+
+Today's Schedule
+Session	Topic	Time
+Session 1	Package Ecosystems & Dependency Management	1 hour
+Session 2	Dependency Trees	1 hour
+Session 3	Semantic Versioning (SemVer)	45 minutes
+Session 4	Hands-on npm Lab	1–2 hours
+Session 5	Snyk Dependency Analysis	1 hour
+Assessment	Practical Questions & GitHub Notes	30–45 minutes
