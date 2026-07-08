@@ -133,3 +133,62 @@ End-of-Software-Composition-Analysis Wk1Day2 Assessments
 8.Explain how a typosquatting attack works.
 9.What is a dependency confusion attack?
 10.Why has software supply chain security become a critical focus in cybersecurity?
+
+
+
+
+
+
+**1. What is dependency management, and why is it important?**
+  Dependency management is the practice of tracking, resolving, and controlling the external libraries, packages, or modules that a piece of software relies on to build and run. It's important because modern software rarely gets written from scratch — most projects pull in dozens or hundreds of third-party components. Without a system for tracking versions, compatibility, and updates, projects become fragile, hard to reproduce, and vulnerable to security issues. Good dependency management ensures builds are repeatable, security patches get applied, and conflicting requirements between packages get resolved predictably.
+
+**2. Components of a package ecosystem**
+  A package ecosystem typically includes:
+  - **Package registry** – a central repository hosting packages (e.g., npm, PyPI, crates.io)
+  - **Package manager** – the client tool that installs, updates, and removes packages (npm, pip, cargo, etc.)
+  - **Manifest files** – declare direct dependencies and version constraints (package.json, requirements.txt, Cargo.toml)
+  - **Lock files** – pin exact resolved versions for reproducible builds (package-lock.json, Pipfile.lock)
+  - **Metadata** – author info, license, version history, checksums
+  - **Namespace/naming rules** – how packages are identified and disambiguated
+  - **Publishing/authentication system** – controls who can publish or update a package
+
+**3. What is a software supply chain?**
+  It's the entire pipeline of components, tools, and processes involved in producing a piece of software — from the original source code and third-party dependencies, through build tools, CI/CD pipelines, package registries, and distribution channels, all the way to the end user's deployed application. Just like a physical supply chain, a compromise at any link (a malicious dependency, a hijacked build server, a tampered registry) can propagate downstream to everyone using the final product.
+
+**4. Why are package registries essential?**
+  Registries are the backbone of modern development because they let developers discover, share, and reuse code instead of reinventing it. They centralize distribution (so `npm install express` "just works"), provide versioning so projects can pin specific releases, and often include metadata like download counts and security advisories. Without them, dependency management would require manually locating and vetting source code from scattered origins — slow, inconsistent, and much harder to secure.
+
+**5. What is dependency hell?**
+  "Dependency hell" refers to the tangle of problems that arise when a project's dependencies have conflicting requirements — for example, Package A needs Library X version 1.2, while Package B needs version 2.0, and the two are incompatible. It can also refer to long chains of transitive dependencies (dependencies of dependencies) that become difficult to resolve, update, or audit. Symptoms include broken builds, version conflicts, and "it works on my machine" issues caused by inconsistent dependency trees across environments.
+
+**6. Lifecycle of a software package**
+  A typical package lifecycle looks like:
+  1. **Development** – author writes code and defines metadata (name, version, license)
+  2. **Publishing** – package is uploaded to a registry under a unique name/version
+  3. **Discovery** – other developers find it via search or documentation
+  4. **Consumption** – it's added as a dependency in other projects
+  5. **Maintenance** – bug fixes, security patches, and new versions are released
+  6. **Deprecation** – the maintainer may mark it as outdated or superseded
+  7. **Abandonment or archival** – updates stop, and it may eventually be removed or become a security liability
+
+
+**7. Why do packages become abandoned, and what risks do they pose?**
+  Packages get abandoned for reasons like maintainer burnout, loss of interest, lack of funding, a job change, or the functionality becoming obsolete (superseded by a better tool or absorbed into a language's standard library). The risks: no more security patches, so known vulnerabilities go unfixed; incompatibility with newer language/runtime versions; and — critically — an abandoned but still widely-used package's name can be "hijacked" or taken over by a malicious actor if ownership lapses, letting them push malware to everyone still depending on it.
+
+
+**8. How does a typosquatting attack work?**
+  An attacker publishes a malicious package under a name that's a common misspelling or visual variant of a popular legitimate package — for example, `reqeusts` instead of `requests`, or `crossenv` instead of `cross-env`. Developers who mistype the package name during installation unknowingly pull in the malicious version instead. The malicious package often mimics the real one's functionality (so the mistake isn't obvious) while secretly exfiltrating credentials, installing backdoors, or executing other malicious code during install scripts.
+
+
+**9. What is a dependency confusion attack?**
+  This exploits how package managers resolve names across public and private registries. Many organizations use internal/private packages with normal-sounding names (e.g., `mycompany-utils`) that aren't published publicly. An attacker publishes a package with the *same name* on a public registry, often with a higher version number. If a project's configuration isn't set up to strictly prioritize the private registry, the package manager may pull the attacker's public (and higher-versioned) package instead of the intended internal one — silently substituting malicious code into an internal build. This technique was famously demonstrated by security researcher Alex Birsan in 2021 against major tech companies.
+
+
+**10. Why has software supply chain security become a critical focus in cybersecurity?**
+  A few converging reasons:
+- **Scale of reuse** – modern apps depend on huge, deep trees of third-party code, so one compromised dependency can affect thousands of downstream projects at once (high leverage for attackers).
+- **High-profile incidents** – events like the SolarWinds breach and the Log4j vulnerability showed how a single compromised component can cascade into a global crisis.
+- **Implicit trust** – developers often install packages without auditing their code, trusting the registry and community reputation alone.
+- **Automation and CI/CD** – build pipelines pull dependencies automatically, meaning a malicious package can execute code with elevated privileges with no human review step.
+- **Attacker ROI** – compromising one popular package is far more efficient than attacking individual targets one at a time.
+
